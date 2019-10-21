@@ -1,9 +1,10 @@
 fn main() {
     leftValue();
     rightValue();
+    scalarValue();
 }
 
-fn leftValue() {
+fn left_value() {
     let x = 5;
     //x = 6; //compiler panic
     let mut y = 5;
@@ -12,7 +13,7 @@ fn leftValue() {
     println!("new y is {}", y)
 }
 
-fn rightValue() {
+fn right_value() {
     struct Point {
         pub a : i8,
         pub b : i8
@@ -30,7 +31,7 @@ fn rightValue() {
 
 }
 
-fn scalarValue() {
+fn scalar_value() {
     //let x = 5; //compiler panic
     let mut x = 5;
     println!("x is {}", x);
