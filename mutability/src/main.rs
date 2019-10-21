@@ -1,7 +1,7 @@
 fn main() {
-    leftValue();
-    rightValue();
-    scalarValue();
+    left_value();
+    right_value();
+    scalar_value();
 }
 
 fn left_value() {
@@ -34,8 +34,13 @@ fn right_value() {
 fn scalar_value() {
     //let x = 5; //compiler panic
     let mut x = 5;
+    let z = 100;
     println!("x is {}", x);
+
     let y = &mut x;
     *y = 6;
-    println!("x is {}", x)
+    println!("x is {}", *y);
+    *y = z;
+    println!("x is {}",x);
+    println!("z is {}",z);
 }
