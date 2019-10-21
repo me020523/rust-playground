@@ -1,0 +1,8 @@
+[package]
+name = "zksnark"
+version = "0.1.0"
+authors = ["shuaibc1 <shuaibc1@lenovo.com>"]
+edition = "2018"
+
+[dependencies]
+zksnark = "0.0.2"
