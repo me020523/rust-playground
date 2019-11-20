@@ -1,5 +1,6 @@
 fn main() {
     if_state();
+    if_let();
 }
 
 //rust中if-else是一个表达式
@@ -21,4 +22,13 @@ fn if_express(age : u32) -> u32 {
     };
 
     kind
+}
+
+fn if_let() {
+    let x = Some(10);
+    if let Some(5) = x {
+        println!("if_let test true")
+    }else{
+        println!("if_let test false")
+    }
 }
