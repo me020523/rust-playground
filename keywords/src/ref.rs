@@ -20,7 +20,13 @@ fn mutability() {
     let ref mut q2 = p;
     q2.a = 1;
     println!("new p.a is {}", p.a);
+
+    let r = Point{a:2,b:3};
+    let mut q = r;
+    q.a = 4;
+    println!("q.a is {}", q.a);
 }
+
 fn ref_field() {
     let p = Point{a:1,b:2};
     let Point{a: to_a, b: _} = p;
