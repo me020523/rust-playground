@@ -116,3 +116,8 @@ fn tuple_data() {
 fn display_tuple(t : &(i8,f64,bool)) {
     println!("({},{},{})", t.0,t.1,t.2)
 }
+fn slice_data() {
+    let mut x = [1,2,3];
+    //let y = x[..]; //compiler will panic
+    let _z = &mut x[..];
+}
