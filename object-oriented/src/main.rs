@@ -32,6 +32,11 @@ impl PartialOrd for Rectangle {
 }
 
 fn main() {
+    play_meta();
+    play_trait();
+}
+
+fn play_meta() {
     let mut rect = Rectangle::new();
     rect.width = 10;
     rect.height = 10;
@@ -42,4 +47,8 @@ fn main() {
 
     assert_eq!(rect>rect2, true);
     println!("the area is {}", rect.area());
+}
+mod mytrait;
+fn play_trait() {
+    mytrait::run();
 }
