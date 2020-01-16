@@ -121,3 +121,29 @@ fn slice_data() {
     //let y = x[..]; //compiler will panic
     let _z = &mut x[..];
 }
+
+struct Point {
+    a: u8,
+    b: u8,
+}
+
+fn array_elem_ownership() {
+    let nums = [1,2,3,4,5];
+    array_elem_ownership_internal(nums[3]); //just copy
+    println!("{}",nums[3]);
+
+    let points = [
+        Point{a:1, b:2},
+        Point{a:1, b:2},
+    ];
+
+    let p = points[0];  //compiler panic, non-copy array
+}
+
+
+fn array_elem_ownership_internal(v: i32) {
+    println!("{}",v)
+}
+fn array_elem_ownership_internal2(v: Point) {
+    println!("{},{}",v.a,v.b)
+}

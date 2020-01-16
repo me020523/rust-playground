@@ -38,3 +38,15 @@ fn ref_field() {
     to_a2 = 10;
     println!("p.a is {}", to_a2);
 }
+
+fn ref_copy() {
+    let p = Point{a:10,b:10};
+}
+
+fn ref_copy_internal(v:&Point) -> Point{
+    //*v;   //compiler panic, cannot move out borrowed content
+    Point {
+        a: v.a,
+        b: v.b,
+    }
+}
