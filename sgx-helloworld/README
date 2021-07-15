@@ -1,0 +1,2 @@
+# 生成签名私钥
+openssl genrsa -out my_private_key.pem -3 3072

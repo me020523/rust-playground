@@ -1,0 +1,17 @@
+[package]
+name = "app"
+version = "0.1.0"
+authors = ["me020523 <me020523@gmail.com>"]
+edition = "2018"
+build = "build.rs"
+
+[features]
+default = []
+
+[dependencies]
+sgx_urts = { git = "https://github.com/apache/teaclave-sgx-sdk.git" }
+sgx_types = { git = "https://github.com/apache/teaclave-sgx-sdk.git" }
+
+[build-dependencies]
+cc = "1.0.50"
+
